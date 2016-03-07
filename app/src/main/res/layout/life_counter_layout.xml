@@ -49,7 +49,7 @@
                 app:layout_column="0"
                 app:layout_row="0"
 
-                app:layout_columnWeight="1.0"
+                app:layout_columnWeight="0.5"
                 app:layout_rowWeight="1.0"
 
                 app:layout_gravity="fill_horizontal"
@@ -63,7 +63,7 @@
                 app:layout_column="0"
                 app:layout_row="1"
 
-                app:layout_columnWeight="1.0"
+                app:layout_columnWeight="0.5"
                 app:layout_rowWeight="1.0"
 
                 app:layout_gravity="fill_horizontal"
@@ -83,7 +83,7 @@
                 app:layout_column="1"
                 app:layout_row="0"
 
-                app:layout_columnWeight="1.0"
+                app:layout_columnWeight="0.5"
                 app:layout_rowWeight="1.0"
 
                 app:layout_gravity="fill_horizontal"
@@ -101,7 +101,7 @@
                 app:layout_column="1"
                 app:layout_row="1"
 
-                app:layout_columnWeight="1.0"
+                app:layout_columnWeight="0.5"
                 app:layout_rowWeight="1.0"
                 app:layout_gravity="fill_horizontal"
 
@@ -111,10 +111,10 @@
 
             <!--Column 2-->
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="0dp"
 
-                android:text="Commander Damage \n Taken From"
+                android:text="Commander Damage \n (Taken From)"
 
                 app:layout_column="2"
                 app:layout_row="0"
@@ -175,9 +175,9 @@
             </LinearLayout>
             <!--Column 3-->
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="0dp"
-                android:text="Commander Damage \n Dealt To"
+                android:text="Commander Damage \n (Dealt To)"
 
 
                 app:layout_column="3"
