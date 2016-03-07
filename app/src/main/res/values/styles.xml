@@ -17,4 +17,15 @@
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
+    <style name="ValueLabelText">
+        <item name="android:textSize">@dimen/value_label_text_size</item>
+        <item name="android:gravity">center</item>
+    </style>
+    <style name="ValueText">
+        <item name="android:textSize">@dimen/value_text_size</item>
+        <item name="android:gravity">center</item>
+    </style>
+    <style name="FlatButton">
+        <item name="android:background">?attr/selectableItemBackground</item>
+    </style>
 </resources>
