@@ -1,4 +1,14 @@
 apply plugin: 'com.android.application'
+apply plugin: 'com.google.protobuf'
+buildscript {
+    repositories {
+        jcenter()
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'com.google.protobuf:protobuf-gradle-plugin:0.7.5'
+    }
+}
 
 android {
     compileSdkVersion 23
@@ -19,10 +29,45 @@ android {
     }
 }
 
+protobuf {
+    protoc {
+        artifact = 'com.google.protobuf:protoc:3.0.0-beta-2'
+    }
+    plugins {
+        //noinspection GroovyAssignabilityCheck
+        grpc {
+            artifact = 'io.grpc:protoc-gen-grpc-java:0.9.0'
+        }
+    }
+    generateProtoTasks {
+        all().each { task ->
+            task.builtins {
+                javanano {
+                    // Options added to --javanano_out
+                    option 'ignore_services=true'
+                }
+            }
+
+            task.plugins {
+                grpc {
+                    // Options added to --grpc_out
+                    option 'nano=true'
+                }
+            }
+        }
+    }
+}
+
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     testCompile 'junit:junit:4.12'
     compile 'com.android.support:appcompat-v7:23.1.0'
     compile 'com.android.support:gridlayout-v7:23.1.0'
+    compile 'com.android.support:cardview-v7:23.1.0'
     compile 'com.android.support:design:23.1.0'
+
+    compile 'info.android15.solid:streams:2.0.2'
+    compile 'info.android15.solid:collections:2.0.2'
+
+    compile 'io.grpc:grpc-protobuf-nano:0.13.1'
 }

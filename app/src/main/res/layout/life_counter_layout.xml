@@ -1,217 +1,271 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <android.support.v7.widget.GridLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
 
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:layout_height="100dp"
+    android:layout_height="200dp"
 
-    app:columnCount="1"
-    app:rowCount="1">
+    tools:layout_height="150dp"
 
-    <HorizontalScrollView  xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:columnCount="2"
+    app:rowCount="2">
 
+    <View
         android:layout_width="0dp"
         android:layout_height="0dp"
-
+        android:background="@android:color/holo_green_dark"
+        app:layout_column="0"
+        app:layout_row="0"
+        app:layout_columnSpan="2"
+        app:layout_columnWeight=".3"
+        app:layout_rowWeight=".5"/>
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/colorPrimary"
+        app:layout_column="0"
+        app:layout_row="1"
+        app:layout_columnSpan="2"
+        app:layout_columnWeight="1"
+        app:layout_rowWeight="2.0"/>
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:cardUseCompatPadding="true"
+        app:cardElevation="4dp"
+        app:cardCornerRadius="3dp"
         app:layout_column="0"
         app:layout_row="0"
 
+        app:layout_columnWeight=".3"
+        app:layout_rowWeight=".5"
+        />
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+
+        app:cardUseCompatPadding="true"
+        app:cardElevation="4dp"
+        app:cardCornerRadius="3dp"
+
+        app:layout_column="1"
+        app:layout_row="0"
+
         app:layout_columnWeight="1.0"
-        app:layout_rowWeight="1.0">
+        app:layout_rowWeight=".5"
 
-        <android.support.v7.widget.GridLayout
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
+        tools:text="Errant"/>
+    <android.support.v7.widget.CardView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
 
-            android:padding="10dp"
+        app:cardUseCompatPadding="false"
+        app:cardElevation="9dp"
+        app:cardCornerRadius="3dp"
 
-            android:minWidth="700dp"
+        app:layout_column="0"
+        app:layout_row="1"
 
-            app:columnCount="4"
-            app:rowCount="3"
+        app:layout_columnSpan="2"
+        app:layout_columnWeight="1.0"
+        app:layout_rowWeight="2.0">
 
-            app:alignmentMode="alignBounds"
-            app:rowOrderPreserved="false"
-            app:useDefaultMargins="false">
+        <HorizontalScrollView  xmlns:android="http://schemas.android.com/apk/res/android"
 
-            <!--Column 0-->
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="0dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
-                android:text="Life"
+            <android.support.v7.widget.GridLayout
+                tools:background="@android:color/holo_green_light"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
 
-                app:layout_column="0"
-                app:layout_row="0"
+                android:padding="10dp"
 
-                app:layout_columnWeight="0.5"
-                app:layout_rowWeight="1.0"
+                android:minWidth="700dp"
 
-                app:layout_gravity="fill_horizontal"
+                app:columnCount="4"
+                app:rowCount="3"
 
-                style="@style/ValueLabelText"/>
+                app:alignmentMode="alignBounds"
+                app:rowOrderPreserved="false"
+                app:useDefaultMargins="false">
 
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-
-                app:layout_column="0"
-                app:layout_row="1"
-
-                app:layout_columnWeight="0.5"
-                app:layout_rowWeight="1.0"
-
-                app:layout_gravity="fill_horizontal"
-
-                tools:text="20"
-
-                style="@style/ValueText"/>
-
-            <!--Column 1-->
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-
-                android:text="Infect"
-
-
-                app:layout_column="1"
-                app:layout_row="0"
-
-                app:layout_columnWeight="0.5"
-                app:layout_rowWeight="1.0"
-
-                app:layout_gravity="fill_horizontal"
-
-                style="@style/ValueLabelText"    />
-
-
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-
-
-
-                app:layout_column="1"
-                app:layout_row="1"
-
-                app:layout_columnWeight="0.5"
-                app:layout_rowWeight="1.0"
-                app:layout_gravity="fill_horizontal"
-
-                tools:text="20"
-
-                style="@style/ValueText"/>
-
-            <!--Column 2-->
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-
-                android:text="Commander Damage \n (Taken From)"
-
-                app:layout_column="2"
-                app:layout_row="0"
-
-                app:layout_columnWeight="1.0"
-                app:layout_rowWeight="1.0"
-
-                app:layout_gravity="fill_horizontal"
-
-                style="@style/ValueLabelText"/>
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-
-                android:text="20"
-
-                app:layout_column="2"
-                app:layout_row="1"
-
-                app:layout_columnWeight="1.0"
-                app:layout_rowWeight="1.0"
-
-                app:layout_gravity="fill_horizontal"
-
-
-                style="@style/ValueText"/>
-
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-
-                app:layout_columnWeight="1.0"
-                app:layout_rowWeight=".7"
-
-                app:layout_column="2">
-
-                <Button
+                <!--Column 0-->
+                <TextView
                     android:layout_width="0dp"
-                    android:layout_height="match_parent"
+                    android:layout_height="0dp"
 
-                    android:layout_weight="1"
+                    android:text="Life"
 
-                    android:text="-"
+                    app:layout_column="0"
+                    app:layout_row="0"
 
-                    style="@style/FlatButton"/>
+                    app:layout_columnWeight="0.5"
+                    app:layout_rowWeight="1.0"
 
-                <Button
+                    app:layout_gravity="fill_horizontal"
+
+                    style="@style/ValueLabelText"/>
+
+                <TextView
                     android:layout_width="0dp"
-                    android:layout_height="match_parent"
+                    android:layout_height="0dp"
 
-                    android:layout_weight="1"
+                    app:layout_column="0"
+                    app:layout_row="1"
 
-                    android:text="+"
+                    app:layout_columnWeight="0.5"
+                    app:layout_rowWeight="1.0"
 
-                    style="@style/FlatButton"/>
+                    app:layout_gravity="fill_horizontal"
 
-            </LinearLayout>
-            <!--Column 3-->
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:text="Commander Damage \n (Dealt To)"
+                    tools:text="20"
 
+                    style="@style/ValueText"/>
 
-                app:layout_column="3"
-                app:layout_row="0"
+                <!--Column 1-->
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
 
-                app:layout_columnWeight="1.0"
-                app:layout_rowWeight="1.0"
-
-                app:layout_gravity="fill_horizontal"
+                    android:text="Infect"
 
 
-                style="@style/ValueLabelText"/>
+                    app:layout_column="1"
+                    app:layout_row="0"
 
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="0dp"
+                    app:layout_columnWeight="0.5"
+                    app:layout_rowWeight="1.0"
 
+                    app:layout_gravity="fill_horizontal"
 
-
-                app:layout_column="3"
-                app:layout_row="1"
-
-                app:layout_columnWeight="1.0"
-                app:layout_rowWeight="1.0"
-
-                app:layout_gravity="fill_horizontal"
-
-                tools:text="20"
-
-                style="@style/ValueText"/>
+                    style="@style/ValueLabelText"    />
 
 
-        </android.support.v7.widget.GridLayout>
-    </HorizontalScrollView>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
 
 
+
+                    app:layout_column="1"
+                    app:layout_row="1"
+
+                    app:layout_columnWeight="0.5"
+                    app:layout_rowWeight="1.0"
+                    app:layout_gravity="fill_horizontal"
+
+                    tools:text="20"
+
+                    style="@style/ValueText"/>
+
+                <!--Column 2-->
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+
+                    android:text="Commander Damage \n (Taken From)"
+
+                    app:layout_column="2"
+                    app:layout_row="0"
+
+                    app:layout_columnWeight="1.0"
+                    app:layout_rowWeight="1.0"
+
+                    app:layout_gravity="fill_horizontal"
+
+                    style="@style/ValueLabelText"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+
+                    android:text="20"
+
+                    app:layout_column="2"
+                    app:layout_row="1"
+
+                    app:layout_columnWeight="1.0"
+                    app:layout_rowWeight="1.0"
+
+                    app:layout_gravity="fill_horizontal"
+
+
+                    style="@style/ValueText"/>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+
+                    app:layout_columnWeight="1.0"
+                    app:layout_rowWeight=".7"
+
+                    app:layout_column="2">
+
+                    <Button
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+
+                        android:layout_weight="1"
+
+                        android:text="-"
+
+                        style="@style/FlatButton"/>
+
+                    <Button
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+
+                        android:layout_weight="1"
+
+                        android:text="+"
+
+                        style="@style/FlatButton"/>
+
+                </LinearLayout>
+                <!--Column 3-->
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:text="Commander Damage \n (Dealt To)"
+
+
+                    app:layout_column="3"
+                    app:layout_row="0"
+
+                    app:layout_columnWeight="1.0"
+                    app:layout_rowWeight="1.0"
+
+                    app:layout_gravity="fill_horizontal"
+
+
+                    style="@style/ValueLabelText"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+
+
+
+                    app:layout_column="3"
+                    app:layout_row="1"
+
+                    app:layout_columnWeight="1.0"
+                    app:layout_rowWeight="1.0"
+
+                    app:layout_gravity="fill_horizontal"
+
+                    tools:text="20"
+
+                    style="@style/ValueText"/>
+
+
+            </android.support.v7.widget.GridLayout>
+        </HorizontalScrollView>
+    </android.support.v7.widget.CardView>
 </android.support.v7.widget.GridLayout>
